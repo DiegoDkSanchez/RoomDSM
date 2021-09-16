@@ -1,7 +1,6 @@
 package com.dsm.roomorm.repository
 
 import android.content.Context
-import androidx.annotation.WorkerThread
 import com.dsm.roomorm.dao.VehicleDao
 import com.dsm.roomorm.database.VehicleRoomDatabase
 import com.dsm.roomorm.entities.Vehicle
@@ -32,9 +31,11 @@ class VehicleRepository(private val vehicleDao: VehicleDao) {
     // By default Room runs suspend queries off the main thread, therefore, we don't need to
     // implement anything else to ensure we're not doing long running database work
     // off the main thread.
-    @Suppress("RedundantSuspendModifier")
-    @WorkerThread
     suspend fun insert(vehicle: Vehicle) {
         vehicleDao.insert(vehicle)
+    }
+
+    suspend fun deleteAll() {
+        vehicleDao.deleteAll()
     }
 }
