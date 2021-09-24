@@ -1,6 +1,7 @@
 package com.dsm.roomorm.entities
 
 import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -14,4 +15,6 @@ data class Vehicle(
     val color: String,
     @ColumnInfo(name = "year")
     val year: Int,
+    @Embedded
+    val brand: Brand?
 )

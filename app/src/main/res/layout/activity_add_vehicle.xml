@@ -4,31 +4,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddVehicleActivity"
-    android:padding="20dp">
+    android:padding="20dp"
+    tools:context=".AddVehicleActivity">
 
     <EditText
         android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Model"/>
+        android:hint="Model" />
+
     <EditText
         android:id="@+id/et_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Year"/>
+        android:hint="Year"
+        android:inputType="number" />
+
     <EditText
         android:id="@+id/et_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Color"/>
+        android:hint="Color" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select Brand"/>
+
+    <Spinner
+        android:id="@+id/sp_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_add_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Add new brand" />
 
     <Button
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:text="Add"/>
+        android:text="Add Vehicle" />
+
 
 </LinearLayout>
